@@ -10,6 +10,10 @@ class Song
     @@songs << self
   end
 
+  def self.all
+    @@songs
+  end
+
   def self.find_by_name(name)
     self.all.detect{|a| a.name == name}
   end
@@ -30,7 +34,4 @@ class Song
     name.downcase.gsub(' ', '-')
   end
 
-  def self.all
-    @@songs
-  end
 end
