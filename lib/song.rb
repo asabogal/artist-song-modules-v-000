@@ -1,8 +1,8 @@
 require 'pry'
 
 class Song
-  attr_accessor :name
-  attr_reader :artist
+  attr_accessor :name. :artist
+  # attr_reader :artist
 
   @@songs = []
 
@@ -18,17 +18,17 @@ class Song
     self.all.detect{|a| a.name == name}
   end
 
-  def artist=(artist)
-    @artist = artist
+  # def artist=(artist)
+  #   @artist = artist
+  # end
+
+  def self.reset_all
+    self.all.clear
   end
 
-  # def self.reset_all
-  #   self.all.clear
-  # end
-  #
-  # def self.count
-  #   self.all.count
-  # end
+  def self.count
+    self.all.count
+  end
 
   def to_param
     name.downcase.gsub(' ', '-')
