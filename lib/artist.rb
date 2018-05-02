@@ -7,7 +7,7 @@ class Artist
   @@artists = []
 
   def self.find_by_name(name)
-    @@artists.detect{|a| a.name == name}
+    self.all.detect{|a| a.name == name}
   end
 
   def initialize
@@ -24,7 +24,7 @@ class Artist
   end
 
   def self.count
-    @@artists.count
+    self.all.count
   end
 
   def add_song(song)
