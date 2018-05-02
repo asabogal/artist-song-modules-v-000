@@ -18,9 +18,9 @@ class Song
     self.all.detect{|a| a.name == name}
   end
 
-  def artist=(artist)
-    @artist = artist
-  end
+  # def artist=(artist)
+  #   @artist = artist
+  # end
 
   # def self.reset_all
   #   self.all.clear
